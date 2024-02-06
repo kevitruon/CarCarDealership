@@ -1,15 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from "./MainPage";
 import Nav from "./Nav";
-<<<<<<< HEAD
 import TechnicianForm from "./TechnicianForm";
 import TechnicianList from "./TechnicianList";
-=======
 import AddSalesPerson from "./AddSalesPerson";
 import ListSalesPeople from "./ListSalesPeople";
 import AddCustomer from "./AddCustomer";
 import ListCustomer from "./ListCustomer";
->>>>>>> cf5ff751a737a3318daf9624c512a95e63a46ab8
 
 function App() {
   return (
@@ -29,19 +26,8 @@ function App() {
           <Route path="/add-customer" element={<AddCustomer />} />
           <Route path="/sale" element={<MainPage />} />
           <Route path="/sales-history" element={<MainPage />} />
-<<<<<<< HEAD
-        </Routes>
-        <Routes>
           <Route path="/technicians" element={<TechnicianList />} />
-        </Routes>
-        <Routes>
           <Route path="/add-technician" element={<TechnicianForm />} />
-        </Routes>
-        <Routes>
-=======
-          <Route path="/technicians" element={<MainPage />} />
-          <Route path="/add-technician" element={<MainPage />} />
->>>>>>> cf5ff751a737a3318daf9624c512a95e63a46ab8
           <Route path="/service-appointment" element={<MainPage />} />
           <Route path="/create-service-appointment" element={<MainPage />} />
           <Route path="/service-history" element={<MainPage />} />
