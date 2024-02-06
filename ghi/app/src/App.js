@@ -3,14 +3,11 @@ import MainPage from "./MainPage";
 import Nav from "./Nav";
 import TechnicianForm from "./TechnicianForm";
 import TechnicianList from "./TechnicianList";
-<<<<<<< HEAD
 import AddSalesPerson from "./AddSalesPerson";
 import ListSalesPeople from "./ListSalesPeople";
 import AddCustomer from "./AddCustomer";
 import ListCustomer from "./ListCustomer";
-=======
 import AppointmentForm from "./AppointmentForm";
->>>>>>> kevin-branch
 
 function App() {
   return (
