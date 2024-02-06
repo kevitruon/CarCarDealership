@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 function TechnicianForm() {
   const [FormData, setFormData] = useState({
@@ -10,9 +10,6 @@ function TechnicianForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(FormData);
-    FormData.first_name = first_name;
-    FormData.last_name = last_name;
-    FormData.employee_id = employee_id;
     const techURL = "http://localhost:8080/api/technicians/";
     const fetchConfig = {
       method: "POST",
@@ -44,7 +41,7 @@ function TechnicianForm() {
     <div className="row">
       <div className="offset-3 col-6">
         <div className="shadow p-4 mt-4">
-          <h1>Create a new Shoe</h1>
+          <h1>Add a Technician</h1>
           <form onSubmit={handleSubmit} id="create-tech-form">
             <div className="form-floating mb-3">
               <input

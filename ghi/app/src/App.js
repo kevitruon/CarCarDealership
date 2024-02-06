@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from "./MainPage";
 import Nav from "./Nav";
+import TechnicianForm from "./TechnicianForm";
+import TechnicianList from "./TechnicianList";
 
 function App() {
   return (
@@ -41,10 +43,10 @@ function App() {
           <Route path="/sales-history" element={<MainPage />} />
         </Routes>
         <Routes>
-          <Route path="/technicians" element={<MainPage />} />
+          <Route path="/technicians" element={<TechnicianList />} />
         </Routes>
         <Routes>
-          <Route path="/add-technician" element={<MainPage />} />
+          <Route path="/add-technician" element={<TechnicianForm />} />
         </Routes>
         <Routes>
           <Route path="/service-appointment" element={<MainPage />} />

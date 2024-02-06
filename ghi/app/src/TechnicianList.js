@@ -14,8 +14,9 @@ function TechnicianList() {
   }, []);
   return (
     <>
-      <table>
-        <thead>
+      <h1>Technician</h1>
+      <table className="table table-striped table-hover table-borderless">
+        <thead className="thead border-bottom thick-border">
           <tr>
             <th>First Name</th>
             <th>Last Name</th>
