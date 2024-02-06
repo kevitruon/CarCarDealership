@@ -1,16 +1,17 @@
 import { useState } from "react";
 
-function AddSalesPerson() {
-  const [salesRep, setSalesRep] = useState({
+function AddCustomer() {
+  const [customer, setCustomer] = useState({
     first_name: "",
     last_name: "",
-    employee_id: "",
+    address: "",
+    phone_number: "",
   });
   const [addSuccess, setAddSuccess] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setSalesRep((prevData) => ({
+    setCustomer((prevData) => ({
       ...prevData,
       [name]: value,
     }));
@@ -19,29 +20,30 @@ function AddSalesPerson() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:8090/api/salespeople/", {
+      const response = await fetch("http://localhost:8090/api/customers/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(salesRep),
+        body: JSON.stringify(customer),
       });
 
       if (response.ok) {
-        setSalesRep({
+        setCustomer({
           first_name: "",
           last_name: "",
-          employee_id: "",
+          address: "",
+          phone_number: "",
         });
         setAddSuccess(true);
         setTimeout(() => {
           setAddSuccess(false);
         }, 3000);
       } else {
-        console.error("Error adding sales represantative");
+        console.error("Error adding customer");
       }
     } catch (error) {
-      console.error("Error during sales rep. addition:", error.message);
+      console.error("Error during customer addition:", error.message);
     }
   };
 
@@ -54,7 +56,7 @@ function AddSalesPerson() {
               className="alert alert-success alert-dismissible fade show"
               role="alert"
             >
-              Sales rep successfully Added!
+              Customer successfully Added!
               <button
                 type="button"
                 className="btn-close"
@@ -62,7 +64,7 @@ function AddSalesPerson() {
               ></button>
             </div>
           )}
-          <h1 className="card-title">Add Sales Rep.</h1>
+          <h1 className="card-title">Add Customer</h1>
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
               <label htmlFor="first_name" className="form-label">
@@ -73,7 +75,7 @@ function AddSalesPerson() {
                 className="form-control"
                 id="first_name"
                 name="first_name"
-                value={salesRep.first_name}
+                value={customer.first_name}
                 onChange={handleChange}
                 required
               />
@@ -87,27 +89,41 @@ function AddSalesPerson() {
                 className="form-control"
                 id="last_name"
                 name="last_name"
-                value={salesRep.last_name}
+                value={customer.last_name}
                 onChange={handleChange}
                 required
               />
             </div>
             <div className="mb-3">
-              <label htmlFor="employee_id" className="form-label">
-                Employee Id
+              <label htmlFor="address" className="form-label">
+                Address
               </label>
               <input
                 type="text"
                 className="form-control"
-                id="employee_id"
-                name="employee_id"
-                value={salesRep.employee_id}
+                id="address"
+                name="address"
+                value={customer.address}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="phone_number" className="form-label">
+                Phone Number
+              </label>
+              <input
+                type="text"
+                className="form-control"
+                id="phone_number"
+                name="phone_number"
+                value={customer.phone_number}
                 onChange={handleChange}
                 required
               />
             </div>
             <button type="submit" className="btn btn-primary">
-              Add Sales Rep.
+              Add Customer
             </button>
           </form>
         </div>
@@ -116,4 +132,4 @@ function AddSalesPerson() {
   );
 }
 
-export default AddSalesPerson;
+export default AddCustomer;
