@@ -58,27 +58,63 @@ def list_technician(request):
                 status = 400,
             )
 
-@require_http_methods(["GET","PUT", "DELETE"])
+@require_http_methods(["GET", "DELETE"])
 def show_technician(request, pk):
     if request.method == "GET":
-        pass
-    elif request.method == "PUT":
-        pass
+        tech = Technician.objects.get(id=pk)
+        return JsonResponse(
+            tech,
+            encoder=TechnicianDetailEncoder,
+            safe=False
+            )
     else:
-        pass
+        count, _ = Technician.objects.filter(id=pk).delete()
+        return JsonResponse({"deleted": count>0})
 
 @require_http_methods(["GET","POST"])
-def list_appointment(request, vin = None):
+def list_appointment(request):
     if request.method == "GET":
-        pass
+        app = Appointment.objects.all()
+        return JsonResponse(
+            {"appointment":app},
+            encoder=AppointmentDetailEncoder
+        )
     else:
-        pass
+        content = json.loads(request.body)
+        try:
+            techID = content["technician"]
+            tech = Technician.objects.get(id=techID)
+            content["technician"] = tech
+            app = Appointment.objects.create(**content)
+            return JsonResponse(
+                app,
+                encoder=AppointmentDetailEncoder,
+                safe=False
+            )
+        except Technician.DoesNotExist:
+            return JsonResponse(
+                {"message": "Invalid Employee ID"},
+                status = 400,
+            )
 
 @require_http_methods(["GET","PUT", "DELETE"])
 def show_appointment(request, pk):
     if request.method == "GET":
-        pass
+        app = Appointment.objects.get(id=pk)
+        return JsonResponse(
+            app,
+            encoder=AppointmentDetailEncoder,
+            safe=False
+        )
     elif request.method == "PUT":
-        pass
+        content = json.loads(request.body)
+        Appointment.objects.filter(id=pk).update(**content)
+        app = Appointment.objects.get(id=pk)
+        return JsonResponse(
+            app,
+            encoder=AppointmentDetailEncoder,
+            safe=False
+        )
     else:
-        pass
+        count, _ = Appointment.objects.filter(id=pk).delete()
+        return JsonResponse({"deleted": count>0})
