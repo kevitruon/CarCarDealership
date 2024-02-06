@@ -3,10 +3,14 @@ import MainPage from "./MainPage";
 import Nav from "./Nav";
 import TechnicianForm from "./TechnicianForm";
 import TechnicianList from "./TechnicianList";
+<<<<<<< HEAD
 import AddSalesPerson from "./AddSalesPerson";
 import ListSalesPeople from "./ListSalesPeople";
 import AddCustomer from "./AddCustomer";
 import ListCustomer from "./ListCustomer";
+=======
+import AppointmentForm from "./AppointmentForm";
+>>>>>>> kevin-branch
 
 function App() {
   return (
@@ -29,7 +33,11 @@ function App() {
           <Route path="/technicians" element={<TechnicianList />} />
           <Route path="/add-technician" element={<TechnicianForm />} />
           <Route path="/service-appointment" element={<MainPage />} />
-          <Route path="/create-service-appointment" element={<MainPage />} />
+        </Routes>
+        <Routes>
+          <Route path="/create-service-appointment" element={<AppointmentForm />} />
+        </Routes>
+        <Routes>
           <Route path="/service-history" element={<MainPage />} />
         </Routes>
       </div>
