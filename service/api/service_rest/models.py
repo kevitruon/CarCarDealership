@@ -10,7 +10,8 @@ class AutomobileVO(models.Model):
 
 
 class Technician(models.Model):
-    name = models.CharField(max_length=200)
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200, null=True)
     employee_id = models.CharField(max_length=200,unique=True)
 
 
