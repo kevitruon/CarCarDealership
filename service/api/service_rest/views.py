@@ -28,19 +28,57 @@ class AppointmentDetailEncoder(ModelEncoder):
     encoders = {
         "technician": TechnicianDetailEncoder(),
     }
+class AutomobileVOEncoder(ModelEncoder):
+    model = AutomobileVO
+    properties = [
+        "vin",
+        "import_href"
+    ]
 
 @require_http_methods(["GET","POST"])
 def list_technician(request):
-    pass
+    if request.method == "GET":
+        technician = Technician.objects.all()
+        return JsonResponse(
+            {"technician":technician},
+            encoder=TechnicianDetailEncoder
+        )
+    else:
+        try:
+            content = json.loads(request.body)
+            technician = Technician.objects.create(**content)
+            return JsonResponse(
+                technician,
+                encoder=TechnicianDetailEncoder,
+                safe=False
+            )
+        except:
+            return JsonResponse(
+                {"message": "Could not add technician"},
+                status = 400,
+            )
 
 @require_http_methods(["GET","PUT", "DELETE"])
 def show_technician(request, pk):
-    pass
+    if request.method == "GET":
+        pass
+    elif request.method == "PUT":
+        pass
+    else:
+        pass
 
 @require_http_methods(["GET","POST"])
 def list_appointment(request, vin = None):
-    pass
+    if request.method == "GET":
+        pass
+    else:
+        pass
 
 @require_http_methods(["GET","PUT", "DELETE"])
 def show_appointment(request, pk):
-    pass
+    if request.method == "GET":
+        pass
+    elif request.method == "PUT":
+        pass
+    else:
+        pass

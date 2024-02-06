@@ -11,7 +11,7 @@ class AutomobileVO(models.Model):
 
 class Technician(models.Model):
     name = models.CharField(max_length=200)
-    employee_id = models.PositiveIntegerField(unique=True)
+    employee_id = models.CharField(max_length=200,unique=True)
 
 
 class Appointment(models.Model):
