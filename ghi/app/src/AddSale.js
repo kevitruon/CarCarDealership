@@ -14,6 +14,8 @@ function AddSale() {
     price: 0,
   });
 
+  const [selectedAuto, setSelectedAuto] = useState();
+
   useEffect(() => {
     async function loadSalesReps() {
       try {
@@ -69,6 +71,19 @@ function AddSale() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+    if (name === "automobile") {
+      const selected = autos.find((auto) => auto.id === parseInt(value));
+
+      if (selected) {
+        setSelectedAuto((prevSelectedAuto) => ({
+          ...prevSelectedAuto,
+          vin: selected.vin,
+          sold: true,
+        }));
+      }
+    }
+
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
@@ -77,6 +92,8 @@ function AddSale() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    console.log(selectedAuto);
     try {
       const response = await fetch("http://localhost:8090/api/sales/", {
         method: "POST",
@@ -87,6 +104,28 @@ function AddSale() {
       });
 
       if (response.ok) {
+        try {
+          setSelectedAuto(selectedAuto.sold === true);
+          const updateAuto = await fetch(
+            `http://localhost:8100/api/automobiles/${selectedAuto.vin}/`,
+            {
+              method: "PUT",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ sold: selectedAuto.sold }),
+            }
+          );
+
+          if (updateAuto.ok) {
+            console.log("Update Sold Success");
+          } else {
+            console.error("Error updating sold status");
+          }
+        } catch (error) {
+          console.error("Error during sale addition:", error.message);
+        }
+
         setFormData({
           automobile: 0,
           salesperson: 0,
