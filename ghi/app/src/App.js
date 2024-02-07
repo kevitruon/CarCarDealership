@@ -9,6 +9,9 @@ import AddCustomer from "./AddCustomer";
 import ListCustomer from "./ListCustomer";
 import AppointmentForm from "./AppointmentForm";
 import AppointmentList from "./AppointmentList";
+import AppointmentHist from "./AppointmentHist";
+import ManufacturesList from "./ManufacturesList";
+import ManufacturesForm from "./ManufacturesForm";
 
 function App() {
   return (
@@ -16,8 +19,9 @@ function App() {
       <Nav />
       <div className="container">
         <Routes>
-          <Route path="/manufactures" element={<MainPage />} />
-          <Route path="/create-manufacture" element={<MainPage />} />
+          <Route path="/" element={<MainPage />} />
+          <Route path="/manufactures" element={<ManufacturesList />} />
+          <Route path="/create-manufacture" element={<ManufacturesForm />} />
           <Route path="/models" element={<MainPage />} />
           <Route path="/create-models" element={<MainPage />} />
           <Route path="/automobiles" element={<MainPage />} />
@@ -31,8 +35,11 @@ function App() {
           <Route path="/technicians" element={<TechnicianList />} />
           <Route path="/add-technician" element={<TechnicianForm />} />
           <Route path="/service-appointment" element={<AppointmentList />} />
-          <Route path="/create-service-appointment" element={<AppointmentForm />} />
-          <Route path="/service-history" element={<MainPage />} />
+          <Route
+            path="/create-service-appointment"
+            element={<AppointmentForm />}
+          />
+          <Route path="/service-history" element={<AppointmentHist />} />
         </Routes>
       </div>
     </BrowserRouter>
