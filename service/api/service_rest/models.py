@@ -27,4 +27,4 @@ class Appointment(models.Model):
     )
     reason = models.TextField()
     vip = models.BooleanField(default=False)
-    finished = models.BooleanField(default=False)
+    finished = models.BooleanField(default=False, null = True, blank = True)

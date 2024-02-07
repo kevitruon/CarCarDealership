@@ -1,11 +1,13 @@
 import React, {useState, useEffect} from 'react'
 
+
 function AppointmentForm() {
     const [tech, setTech] = useState([])
-    const [FormData,setFormData]= useState({
+    const [formData,setFormData]= useState({
         vin: "",
         owner: "",
-        date_time: "",
+        date: "",
+        time: "",
         technician: "",
         reason: "",
     })
@@ -22,11 +24,11 @@ function AppointmentForm() {
 
     const handleSubmit = async (event) => {
         event.preventDefault()
-        console.log(FormData)
-        const techURL = "http://localhost:8080/api/service_appointments/"
+        console.log(formData)
+        const techURL = "http://localhost:8080/api/appointments/"
         const fetchConfig = {
             method: "POST",
-            body: JSON.stringify(FormData),
+            body: JSON.stringify(formData),
             headers: {
                 "Content-Type": "application/json",
             },
@@ -36,7 +38,8 @@ function AppointmentForm() {
             setFormData({
                 vin: "",
                 owner: "",
-                date_time: "",
+                date: "",
+                time: "",
                 technician: "",
                 reason: "",
             })
@@ -48,7 +51,7 @@ function AppointmentForm() {
         const value = event.target.value
         const inputName = event.target.name
         setFormData({
-            ...FormData,
+            ...formData,
             [inputName]: value,
         })
     }
@@ -61,7 +64,7 @@ function AppointmentForm() {
                             <div className="form-floating mb-3">
                                 <input
                                     onChange={handleFormChange}
-                                    value={FormData.vin}
+                                    value={formData.vin}
                                     placeholder="vin"
                                     required
                                     type="text"
@@ -74,7 +77,7 @@ function AppointmentForm() {
                             <div className="form-floating mb-3">
                                 <input
                                     onChange={handleFormChange}
-                                    value={FormData.owner}
+                                    value={formData.owner}
                                     placeholder="owner"
                                     required
                                     type="text"
@@ -87,20 +90,33 @@ function AppointmentForm() {
                             <div className="form-floating mb-3">
                                 <input
                                     onChange={handleFormChange}
-                                    value={FormData.date_time}
-                                    placeholder="date_time"
+                                    value={formData.date}
+                                    placeholder="date"
                                     required
                                     type="text"
-                                    name="date_time"
-                                    id="date_time"
+                                    name="date"
+                                    id="date"
                                     className="form-control"
                                 />
-                                <label htmlFor="date_time">Date and Time</label>
+                                <label htmlFor="date">Date</label>
+                            </div>
+                            <div className="form-floating mb-3">
+                                <input
+                                    onChange={handleFormChange}
+                                    value={formData.time}
+                                    placeholder="time"
+                                    required
+                                    type="text"
+                                    name="time"
+                                    id="time"
+                                    className="form-control"
+                                />
+                                <label htmlFor="time">Time</label>
                             </div>
                             <div className="form-floating mb-3">
                                 <select
                                     onChange={handleFormChange}
-                                    value={FormData.technician}
+                                    value={formData.technician}
                                     placeholder="technician"
                                     required
                                     type="text"
@@ -122,7 +138,7 @@ function AppointmentForm() {
                             <div className="form-floating mb-3">
                                 <input
                                     onChange={handleFormChange}
-                                    value={FormData.reason}
+                                    value={formData.reason}
                                     placeholder="reason"
                                     required
                                     type="text"
@@ -132,6 +148,7 @@ function AppointmentForm() {
                                 />
                                 <label htmlFor="reason">Reason</label>
                             </div>
+                            <button className="btn btn-primary">Create</button>
                         </form>
                     </div>
                 </div>

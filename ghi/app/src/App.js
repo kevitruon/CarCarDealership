@@ -8,6 +8,7 @@ import ListSalesPeople from "./ListSalesPeople";
 import AddCustomer from "./AddCustomer";
 import ListCustomer from "./ListCustomer";
 import AppointmentForm from "./AppointmentForm";
+import AppointmentList from "./AppointmentList";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
           <Route path="/sales-history" element={<MainPage />} />
           <Route path="/technicians" element={<TechnicianList />} />
           <Route path="/add-technician" element={<TechnicianForm />} />
-          <Route path="/service-appointment" element={<MainPage />} />
+          <Route path="/service-appointment" element={<AppointmentList />} />
           <Route path="/create-service-appointment" element={<AppointmentForm />} />
           <Route path="/service-history" element={<MainPage />} />
         </Routes>

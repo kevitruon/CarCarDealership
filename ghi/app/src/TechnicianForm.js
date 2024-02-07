@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function TechnicianForm() {
-  const [FormData, setFormData] = useState({
+  const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
     employee_id: "",
@@ -9,11 +9,11 @@ function TechnicianForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(FormData);
+    console.log(formData);
     const techURL = "http://localhost:8080/api/technicians/";
     const fetchConfig = {
       method: "POST",
-      body: JSON.stringify(FormData),
+      body: JSON.stringify(formData),
       headers: {
         "Content-Type": "application/json",
       },
@@ -33,7 +33,7 @@ function TechnicianForm() {
     const value = event.target.value;
     const inputName = event.target.name;
     setFormData({
-      ...FormData,
+      ...formData,
       [inputName]: value,
     });
   };
@@ -46,7 +46,7 @@ function TechnicianForm() {
             <div className="form-floating mb-3">
               <input
                 onChange={handleFormChange}
-                value={FormData.first_name}
+                value={formData.first_name}
                 placeholder="firstName"
                 required
                 type="text"
@@ -59,7 +59,7 @@ function TechnicianForm() {
             <div className="form-floating mb-3">
               <input
                 onChange={handleFormChange}
-                value={FormData.last_name}
+                value={formData.last_name}
                 placeholder="lastName"
                 required
                 type="text"
@@ -72,7 +72,7 @@ function TechnicianForm() {
             <div className="form-floating mb-3">
               <input
                 onChange={handleFormChange}
-                value={FormData.employee_id}
+                value={formData.employee_id}
                 placeholder="employeeID"
                 required
                 type="text"
