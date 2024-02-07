@@ -16,7 +16,7 @@ function ListSales() {
           console.error(response);
         }
       } catch (error) {
-        console.error("Error loading sales rep:", error);
+        console.error("Error loading sales:", error);
       }
     }
     loadSales();

@@ -15,6 +15,8 @@ import AppointmentList from "./AppointmentList";
 import AppointmentHist from "./AppointmentHist";
 import ManufacturesList from "./ManufacturesList";
 import ManufacturesForm from "./ManufacturesForm";
+import ListModels from "./ListModels";
+import AddModel from "./AddModel";
 
 function App() {
   return (
@@ -25,8 +27,8 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="/manufactures" element={<ManufacturesList />} />
           <Route path="/create-manufacture" element={<ManufacturesForm />} />
-          <Route path="/models" element={<MainPage />} />
-          <Route path="/create-models" element={<MainPage />} />
+          <Route path="/models" element={<ListModels />} />
+          <Route path="/create-models" element={<AddModel />} />
           <Route path="/automobiles" element={<MainPage />} />
           <Route path="/create-auto" element={<MainPage />} />
           <Route path="/salespeople" element={<ListSalesPeople />} />

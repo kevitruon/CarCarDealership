@@ -122,7 +122,7 @@ function AddSale() {
               ></button>
             </div>
           )}
-          <h1 className="card-title text-center mb-4">Add Customers</h1>
+          <h1 className="card-title text-center mb-4">Add Sales</h1>
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
               <label htmlFor="vin" className="form-label">
