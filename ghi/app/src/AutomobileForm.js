@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from 'react'
-
+import React, { useState, useEffect } from "react";
 
 function AutomobileForm() {
     const [model_id, setModel] = useState([])
@@ -16,9 +15,10 @@ function AutomobileForm() {
             setModel(data.models)
         }
     }
-    useEffect(() => {
-        getData()
-    }, [])
+  };
+  useEffect(() => {
+    getData();
+  }, []);
 
     const handleSubmit = async (event) => {
         event.preventDefault()
@@ -43,14 +43,15 @@ function AutomobileForm() {
             console.error("Error:", response.status, response.statusText)
         }
     }
-    const handleFormChange = (event) => {
-        const value = event.target.value
-        const inputName = event.target.name
-        setFormData({
-            ...formData,
-            [inputName]: value,
-        })
-    }
+  };
+  const handleFormChange = (event) => {
+    const value = event.target.value;
+    const inputName = event.target.name;
+    setFormData({
+      ...formData,
+      [inputName]: value,
+    });
+  };
   return (
             <div className="row">
                 <div className="offset-3 col-6">
@@ -125,4 +126,4 @@ function AutomobileForm() {
         )
     }
 
-    export default AutomobileForm;
+export default AutomobileForm;
