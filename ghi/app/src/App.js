@@ -8,6 +8,9 @@ import ListSalesPeople from "./ListSalesPeople";
 import AddCustomer from "./AddCustomer";
 import ListCustomer from "./ListCustomer";
 import AppointmentForm from "./AppointmentForm";
+import AddSale from "./AddSale";
+import ListSales from "./ListSales";
+import SalespersonHistory from "./SalesPersonHistory";
 
 function App() {
   return (
@@ -25,8 +28,9 @@ function App() {
           <Route path="/add-salesperson" element={<AddSalesPerson />} />
           <Route path="/customer" element={<ListCustomer />} />
           <Route path="/add-customer" element={<AddCustomer />} />
-          <Route path="/sale" element={<MainPage />} />
-          <Route path="/sales-history" element={<MainPage />} />
+          <Route path="/sale" element={<ListSales />} />
+          <Route path="/add-sale" element={<AddSale />} />
+          <Route path="/sales-history" element={<SalespersonHistory />} />
           <Route path="/technicians" element={<TechnicianList />} />
           <Route path="/add-technician" element={<TechnicianForm />} />
           <Route path="/service-appointment" element={<MainPage />} />
