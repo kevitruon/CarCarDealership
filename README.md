@@ -19,7 +19,7 @@ docker-compose up
 
 Services Diagram: ![alt text](ghi/app/public/image.png)
 
-Sales Diagram: ![alt text](ghi/app/public/saleDiagramImage.png)
+Sales Diagram: ![alt text](ghi/app/public/SaleDiagram.png)
 
 ## Service microservice
 
