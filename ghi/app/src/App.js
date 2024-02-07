@@ -15,6 +15,8 @@ import AppointmentList from "./AppointmentList";
 import AppointmentHist from "./AppointmentHist";
 import ManufacturesList from "./ManufacturesList";
 import ManufacturesForm from "./ManufacturesForm";
+import AutomobileList from "./AutomobileList";
+import AutomobileForm from "./AutomobileForm";
 
 function App() {
   return (
@@ -27,8 +29,8 @@ function App() {
           <Route path="/create-manufacture" element={<ManufacturesForm />} />
           <Route path="/models" element={<MainPage />} />
           <Route path="/create-models" element={<MainPage />} />
-          <Route path="/automobiles" element={<MainPage />} />
-          <Route path="/create-auto" element={<MainPage />} />
+          <Route path="/automobiles" element={<AutomobileList />} />
+          <Route path="/create-auto" element={<AutomobileForm />} />
           <Route path="/salespeople" element={<ListSalesPeople />} />
           <Route path="/add-salesperson" element={<AddSalesPerson />} />
           <Route path="/customer" element={<ListCustomer />} />
@@ -43,7 +45,7 @@ function App() {
             path="/create-service-appointment"
             element={<AppointmentForm />}
           />
-          <Route path="/service-history" element={<MainPage />} />
+          <Route path="/service-history" element={<AppointmentHist />} />
         </Routes>
       </div>
     </BrowserRouter>
