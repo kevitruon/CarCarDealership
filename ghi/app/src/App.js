@@ -43,7 +43,7 @@ function App() {
             path="/create-service-appointment"
             element={<AppointmentForm />}
           />
-          <Route path="/service-history" element={<MainPage />} />
+          <Route path="/service-history" element={<AppointmentHist />} />
         </Routes>
       </div>
     </BrowserRouter>
