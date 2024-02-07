@@ -13,29 +13,33 @@ function TechnicianList() {
     getData();
   }, []);
   return (
-    <>
-      <h1>Technician</h1>
-      <table className="table table-striped table-hover table-borderless">
-        <thead className="thead border-bottom thick-border">
-          <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Employee ID</th>
-          </tr>
-        </thead>
-        <tbody>
-          {techs.map((techs) => {
-            return (
-              <tr key={techs.id}>
-                <td>{techs.first_name}</td>
-                <td>{techs.last_name}</td>
-                <td>{techs.employee_id}</td>
+    <div className="container my-5">
+      <div className="card shadow">
+        <div className="card-body">
+          <h1>Technician</h1>
+          <table className="table table-striped table-hover table-borderless">
+            <thead className="thead border-bottom thick-border">
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Employee ID</th>
               </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </>
+            </thead>
+            <tbody>
+              {techs.map((techs) => {
+                return (
+                  <tr key={techs.id}>
+                    <td>{techs.first_name}</td>
+                    <td>{techs.last_name}</td>
+                    <td>{techs.employee_id}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   );
 }
 

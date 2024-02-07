@@ -12,26 +12,30 @@ function AppointmentList() {
   useEffect(() => {
     getData();
   }, []);
-  const cancelStatus = (id) => {
+const cancelStatus = async (id) => {
     const appURL = "http://localhost:8080/api/appointments/" + id + "/";
     const fetchConfig = {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ finished: "" }),
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ finished: "" }),
     };
-    fetch(appURL, fetchConfig);
-  };
-  const finishStatus = (id) => {
+    await fetch(appURL, fetchConfig);
+    getData();
+};
+const finishStatus = async (id) => {
     const appURL = "http://localhost:8080/api/appointments/" + id + "/";
     const fetchConfig = {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ finished: true }),
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ finished: true }),
     };
-    fetch(appURL, fetchConfig);
-  };
+    await fetch(appURL, fetchConfig);
+    getData();
+};
   return (
-    <>
+    <div className="container my-5">
+      <div className="card shadow">
+        <div className="card-body">
       <h1>Appointment</h1>
       <table className="table table-striped table-hover table-borderless">
         <thead className="thead border-bottom thick-border">
@@ -78,10 +82,13 @@ function AppointmentList() {
                 </tr>
               );
             }
+            else{
+                return(null)
+            }
           })}
         </tbody>
       </table>
-    </>
+      </div></div></div>
   );
 }
 export default AppointmentList;
