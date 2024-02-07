@@ -52,7 +52,7 @@ function AddModel() {
         setModel({
           name: "",
           picture_url: "",
-          manufacturer_id: 0,
+          manufacturer_id: "",
         });
         setAddSuccess(true);
         setTimeout(() => {
@@ -129,7 +129,7 @@ function AddModel() {
                 Manufacture
               </label>
               <select
-                value={model.automobile}
+                value={model.manufacturer_id}
                 onChange={handleChange}
                 className="form-control"
                 name="manufacturer_id"

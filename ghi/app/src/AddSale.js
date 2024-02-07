@@ -231,7 +231,7 @@ function AddSale() {
               ></input>
             </div>
 
-            <button className="btn btn-lg btn-primary w-100" type="submit">
+            <button className="btn btn-lg btn-primary" type="submit">
               Create Sale
             </button>
           </form>

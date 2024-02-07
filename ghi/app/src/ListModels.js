@@ -93,7 +93,11 @@ function ListModels() {
                     <td>{model.name}</td>
                     <td>{model.manufacturer.name}</td>
                     <td>
-                      <img src={model.picture_url} alt={model.manufacturer} />
+                      <img
+                        src={model.picture_url}
+                        alt={model.manufacturer}
+                        style={{ width: "100px", height: "auto" }}
+                      />
                     </td>
                     <td className="text-end">
                       <button className="btn btn-sm btn-primary me-2">
