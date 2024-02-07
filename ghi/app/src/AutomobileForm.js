@@ -2,12 +2,12 @@ import React, {useState, useEffect} from 'react'
 
 
 function AutomobileForm() {
-    const [model, setModel] = useState([])
+    const [model_id, setModel] = useState([])
     const [formData,setFormData]= useState({
         vin: "",
         color:"",
         year:0,
-        model:0,
+        model_id:0,
     })
     const getData = async () => {
         const response = await fetch("http://localhost:8100/api/models/")
@@ -36,9 +36,9 @@ function AutomobileForm() {
             setFormData({
                 vin: "",
                 color:"",
-                year:0,
+                year: 0,
+                model_id:0,
             })
-            setModel(parseInt(model.id))
         } else {
             console.error("Error:", response.status, response.statusText)
         }
@@ -86,7 +86,7 @@ function AutomobileForm() {
                             <div className="form-floating mb-3"></div>
                                 <input
                                     onChange={handleFormChange}
-                                    value={parseInt(formData.year)}
+                                    value={formData.year}
                                     placeholder="year"
                                     required
                                     type="number"
@@ -98,19 +98,19 @@ function AutomobileForm() {
                             <div className="form-floating mb-3">
                                 <select
                                     onChange={handleFormChange}
-                                    value={parseInt(formData.model)}
+                                    value={formData.model_id}
                                     placeholder="Model"
                                     required
-                                    type="number"
-                                    name="model"
-                                    id="model"
+                                    type="text"
+                                    name="model_id"
+                                    id="model_id"
                                     className="form-select"
                                 >
                                     <option value="">Choose a model...</option>
-                                    {model.map((model) => {
+                                    {model_id.map((model_id) => {
                                         return (
-                                            <option key={parseInt(model.id)} value={parseInt(model.id)}>
-                                                {model.name}
+                                            <option key={parseInt(model_id.id)} value={parseInt(model_id.id)}>
+                                                {model_id.name}
                                             </option>
                                         )
                                     })}
