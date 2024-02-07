@@ -50,7 +50,7 @@ function AppointmentList() {
     <div className="container my-5">
       <div className="card shadow">
         <div className="card-body">
-          <h1>Appointment</h1>
+          <h1 className="card-title text-center">Appointment</h1>
           <div className="mb-3">
             <input
               type="text"
