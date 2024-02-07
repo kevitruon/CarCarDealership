@@ -119,7 +119,7 @@ function AddModel() {
               </label>
               <img
                 src={model.picture_url}
-                alt="Hat Preview"
+                alt="Model Preview"
                 className="img-fluid"
                 style={{ maxHeight: "200px" }}
               />
