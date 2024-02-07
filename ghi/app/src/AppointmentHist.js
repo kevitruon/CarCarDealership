@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 function AppointmentHist() {
   const [app, setApp] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
   const getData = async () => {
     const response = await fetch("http://localhost:8080/api/appointments/");
     if (response.ok) {
@@ -12,11 +13,25 @@ function AppointmentHist() {
   useEffect(() => {
     getData();
   }, []);
+  const handleSearch = (event) => {
+    setSearchValue(event.target.value);
+  };
+
+  const filteredAppointments = app.filter((appointment) => {
+    return appointment.vin.toLowerCase().includes(searchValue.toLowerCase());
+  });
   return (
     <div className="container my-5">
       <div className="card shadow">
         <div className="card-body">
           <h1>Appointment</h1>
+          <input
+              type="text"
+              className="form-control"
+              placeholder="Search by VIN"
+              value={searchValue}
+              onChange={handleSearch}
+            />
           <table className="table table-striped table-hover table-borderless">
             <thead className="thead border-bottom thick-border">
               <tr>
@@ -31,7 +46,7 @@ function AppointmentHist() {
               </tr>
             </thead>
             <tbody>
-              {app.map((app) => {
+              {filteredAppointments.map((app) => {
                 return (
                   <tr key={app.id}>
                     <td>{app.vin}</td>
