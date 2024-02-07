@@ -6,7 +6,7 @@ Team:
 * Carlos Barrera - Sales
 
 ## Design
-Services Diagram: https://excalidraw.com/#json=spyboJSo-uHnWe06aErC9,fCJOIpokIt9VEMXIEgVELg
+Services Diagram: ![alt text](image.png)
 
 ## Service microservice
 Three models: AutomobileVO, Technician, Appointment
