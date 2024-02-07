@@ -4,6 +4,17 @@ Team:
 
 * Kevin Truong - Services
 * Carlos Barrera - Sales
+## Instructions to Run the Project
+1.) Clone the Repository https://gitlab.com/kevitruon/project-beta
+2.) In the directory of the content run the commands (Must have Docker installed)
+docker volume create beta-data
+docker-compose build
+docker-compose up
+3.) In your browser use http://localhost:3000/ to interact with the CarCar website
+4.) The application loads with an empty database. To fully interact please create the following in order
+    1. Manufacturer
+    2. Model
+    3. Automobile
 
 ## Design
 Services Diagram: ![alt text](ghi/app/public/image.png)
