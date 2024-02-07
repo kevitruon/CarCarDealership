@@ -6,7 +6,7 @@ Team:
 * Carlos Barrera - Sales
 
 ## Design
-Services Diagram: ![alt text](image.png)
+Services Diagram: ![alt text](ghi/app/public/image.png)
 
 ## Service microservice
 Three models: AutomobileVO, Technician, Appointment
