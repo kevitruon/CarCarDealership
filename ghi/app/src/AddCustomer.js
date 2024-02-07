@@ -64,7 +64,7 @@ function AddCustomer() {
               ></button>
             </div>
           )}
-          <h1 className="card-title">Add Customer</h1>
+          <h1 className="card-title text-center">Add Customer</h1>
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
               <label htmlFor="first_name" className="form-label">
@@ -123,7 +123,7 @@ function AddCustomer() {
               />
             </div>
             <button type="submit" className="btn btn-primary">
-              Add Customer
+              Add
             </button>
           </form>
         </div>

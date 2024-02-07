@@ -16,7 +16,7 @@ function TechnicianList() {
     <div className="container my-5">
       <div className="card shadow">
         <div className="card-body">
-          <h1>Technician</h1>
+          <h1 className="card-title text-center">Technician</h1>
           <table className="table table-striped table-hover table-borderless">
             <thead className="thead border-bottom thick-border">
               <tr>

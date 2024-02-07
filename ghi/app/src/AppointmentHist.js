@@ -16,7 +16,7 @@ function AppointmentHist() {
     <div className="container my-5">
       <div className="card shadow">
         <div className="card-body">
-          <h1>Appointment</h1>
+          <h1 className="card-title text-center">Appointment</h1>
           <table className="table table-striped table-hover table-borderless">
             <thead className="thead border-bottom thick-border">
               <tr>
