@@ -62,7 +62,7 @@ function AddSalesPerson() {
               ></button>
             </div>
           )}
-          <h1 className="card-title text-center">Add Sales Rep.</h1>
+          <h1 className="card-title text-center">Add Sales Represantatives</h1>
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
               <label htmlFor="first_name" className="form-label">
@@ -107,7 +107,7 @@ function AddSalesPerson() {
               />
             </div>
             <button type="submit" className="btn btn-primary">
-              Add Sales Rep.
+              Add
             </button>
           </form>
         </div>
