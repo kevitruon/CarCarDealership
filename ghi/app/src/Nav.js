@@ -82,7 +82,7 @@ function Nav() {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/sales-history">
-                Sales History
+                Sales Person History
               </NavLink>
             </li>
             <li className="nav-item">
