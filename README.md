@@ -17,23 +17,25 @@ docker-compose up<br>
 
 ## Accessing Endpoints to Send and View Data: Access Through Insomnia & Your Browser
 
-| Endpoint           | Method | Description                | Screenshot                                                         |
-| ------------------ | ------ | -------------------------- | ------------------------------------------------------------------ |
-| **Sale**           |        |                            |                                                                    |
-| List Sales         | GET    | View all sales             | ![List Sales](ghi/app/public/listsale.png)                         |
-| Add Sales          | POST   | Add a new sale             | ![Add Sales](ghi/app/public/addsalejson.png)                       |
-|                    |        |                            | ![Add Sales Response](ghi/app/public/addsaleresponse.png)          |
-| Delete Sales       | DELETE | Delete a sale by ID        | ![Delete Sales](ghi/app/public/delete.png)                         |
-| **Salesperson**    |        |                            |                                                                    |
-| List Salesperson   | GET    | View all salespeople       | ![List Salesperson](ghi/app/public/listsalesperson.png)            |
-| Add Salesperson    | POST   | Add a new salesperson      | ![Add Salesperson JSON](ghi/app/public/salepersonjson.png)         |
-|                    |        |                            | ![Add Salesperson Response](ghi/app/public/salepersonresponse.png) |
-| Delete Salesperson | DELETE | Delete a salesperson by ID | ![Delete Salesperson](ghi/app/public/delete.png)                   |
-| **Customer**       |        |                            |                                                                    |
-| List Customer      | GET    | View all customers         | ![List Customer](ghi/app/public/listcustomer.png)                  |
-| Add Customer       | POST   | Add a new customer         | ![Add Customer JSON](ghi/app/public/customerjson.png)              |
-|                    |        |                            | ![Add Customer Response](ghi/app/public/customerjson.png)          |
-| Delete Customer    | DELETE | Delete a customer by ID    | ![Delete Customer](ghi/app/public/delete.png)                      |
+## Accessing Endpoints to Send and View Data: Access Through Insomnia & Your Browser
+
+| Endpoint           | Method | Description                | URL                                                                                  | Screenshot                                                         |
+| ------------------ | ------ | -------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| **Sale**           |        |                            |                                                                                      |                                                                    |
+| List Sales         | GET    | View all sales             | [http://localhost:8090/api/sales/](http://localhost:8090/api/sales/)                 | ![List Sales](ghi/app/public/listsale.png)                         |
+| Add Sales          | POST   | Add a new sale             | [http://localhost:8090/api/sales/](http://localhost:8090/api/sales/)                 | ![Add Sales](ghi/app/public/addsalejson.png)                       |
+|                    |        |                            |                                                                                      | ![Add Sales Response](ghi/app/public/addsaleresponse.png)          |
+| Delete Sales       | DELETE | Delete a sale by ID        | [http://localhost:8090/api/sales/id](http://localhost:8090/api/sales/id)             | ![Delete Sales](ghi/app/public/delete.png)                         |
+| **Salesperson**    |        |                            |                                                                                      |                                                                    |
+| List Salesperson   | GET    | View all salespeople       | [http://localhost:8090/api/salespeople/](http://localhost:8090/api/salespeople/)     | ![List Salesperson](ghi/app/public/listsalesperson.png)            |
+| Add Salesperson    | POST   | Add a new salesperson      | [http://localhost:8090/api/salespeople/](http://localhost:8090/api/salespeople/)     | ![Add Salesperson JSON](ghi/app/public/salepersonjson.png)         |
+|                    |        |                            |                                                                                      | ![Add Salesperson Response](ghi/app/public/salepersonresponse.png) |
+| Delete Salesperson | DELETE | Delete a salesperson by ID | [http://localhost:8090/api/salespeople/id](http://localhost:8090/api/salespeople/id) | ![Delete Salesperson](ghi/app/public/delete.png)                   |
+| **Customer**       |        |                            |                                                                                      |                                                                    |
+| List Customer      | GET    | View all customers         | [http://localhost:8090/api/customers/](http://localhost:8090/api/customers/)         | ![List Customer](ghi/app/public/listcustomer.png)                  |
+| Add Customer       | POST   | Add a new customer         | [http://localhost:8090/api/customers/](http://localhost:8090/api/customers/)         | ![Add Customer JSON](ghi/app/public/customerjson.png)              |
+|                    |        |                            |                                                                                      | ![Add Customer Response](ghi/app/public/customerjson.png)          |
+| Delete Customer    | DELETE | Delete a customer by ID    | [http://localhost:8090/api/customers/id](http://localhost:8090/api/customers/id)     | ![Delete Customer](ghi/app/public/delete.png)                      |
 
 ## Design
 
