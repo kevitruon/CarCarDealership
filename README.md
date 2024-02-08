@@ -17,8 +17,6 @@ docker-compose up<br>
 
 ## Accessing Endpoints to Send and View Data: Access Through Insomnia & Your Browser
 
-## Accessing Endpoints to Send and View Data: Access Through Insomnia & Your Browser
-
 | Endpoint           | Method | Description                | URL                                                                                  | Screenshot                                                         |
 | ------------------ | ------ | -------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
 | **Sale**           |        |                            |                                                                                      |                                                                    |
