@@ -31,6 +31,15 @@ docker-compose up<br>
 | List Customer      | GET    | View all customers         | [http://localhost:8090/api/customers/](http://localhost:8090/api/customers/)         |                                                            | ![List Customer](ghi/app/public/listcustomer.png)                  |
 | Add Customer       | POST   | Add a new customer         | [http://localhost:8090/api/customers/](http://localhost:8090/api/customers/)         | ![Add Customer JSON](ghi/app/public/customerjson.png)      | ![Add Customer Response](ghi/app/public/customerjson.png)          |
 | Delete Customer    | DELETE | Delete a customer by ID    | [http://localhost:8090/api/customers/id](http://localhost:8090/api/customers/id)     |                                                            | ![Delete Customer](ghi/app/public/delete.png)                      |
+**Appointment**       |        |                            |                                                                                      |                                                            |                                                                    |
+| List Appointment      | GET    | View all service appointments         | [http://localhost:8080/api/appointments/](http://localhost:8080/api/appointments/)         |                                                            | ![List Appointments](ghi/app/public/listappt.png)                  |
+| Add Appointment       | POST   | Add a new service appointment         | [http://localhost:8080/api/appointments/](http://localhost:8080/api/appointments/)         | ![Add Appointment](ghi/app/public/apptjson.png)      | [Appointment Response](addappt.png)           |
+| Delete Appointment | DELETE | Delete a appointment by ID    | [http://localhost:8080/api/appointments/id/](http://localhost:8080/api/appointments/id/)     |                                                            | ![Delete Appointment](ghi/app/public/delete.png)                      |
+**Technician**       |        |                            |                                                                                      |                                                            |                                                                    |
+| List Technician      | GET    | View all technicians         | [http://localhost:8080/api/technicians/](http://localhost:8080/api/technicians/)         |                                                            | ![Technician Response](ghi/app/public/techresponse.png)                |
+| Add Technician       | POST   | Add a new technician         | [http://localhost:8080/api/technicians/](http://localhost:8080/api/technicians/)         | ![TechJson](ghi/app/public/techjson.png)      | ![Add Technician](ghi/app/public/techresp.png)          |
+| Delete Technician    | DELETE | Delete a technician by ID    | [http://localhost:8080/api/technicians/id/](http://localhost:8080/api/technicians/id/)     |                                                            | ![Delete Technician](ghi/app/public/delete.png)                      |
+
 
 ## Design
 
