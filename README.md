@@ -13,7 +13,7 @@ docker volume create beta-data<br>
 docker-compose build<br>
 docker-compose up<br>
 3.) In your browser use http://localhost:3000/ to interact with the CarCar website<br>
-4.) The application loads with an empty database. To fully interact please create the following in order 1. Manufacturer 2. Model 3. Automobile
+4.) The application loads with an empty database. To fully interact please create the following in order <br>1. Manufacturer <br>2. Model <br>3. Automobile
 
 ## Accessing Endpoints to Send and View Data: Access Through Insomnia & Your Browser
 
