@@ -19,51 +19,66 @@ docker-compose up<br>
 
 ## Sale
 
-List Saless | GET | http://localhost:8090/api/sales/
+### List Sales
 
-Result : ![alt text](ghi/app/public/listsale.png)
+- **Method**: GET
+- **Endpoint**: [http://localhost:8090/api/sales/](http://localhost:8090/api/sales/)
+- **Result**: <img src="ghi/app/public/listsale.png" alt="List Sales" width="400">
 
-Add Sales | POST | http://localhost:8090/api/sales/
+### Add Sales
 
-Input JSON body : ![alt text](ghi/app/public/addsalejson.png)
+- **Method**: POST
+- **Endpoint**: [http://localhost:8090/api/sales/](http://localhost:8090/api/sales/)
+- **Input JSON body**: <img src="ghi/app/public/addsalejson.png" alt="Add Sales JSON" width="400">
+- **Result**: <img src="ghi/app/public/addsaleresponse.png" alt="Add Sales Response" width="400">
 
-Result: ![alt text](ghi/app/public/addsaleresponse.png)
+### Delete Sales
 
-Delete Sales | DELETE | http://localhost:8090/api/sales/id
-
-Result : ![alt text](ghi/app/public/delete.png)
+- **Method**: DELETE
+- **Endpoint**: [http://localhost:8090/api/sales/id](http://localhost:8090/api/sales/id)
+- **Result**: <img src="ghi/app/public/delete.png" alt="Delete Sales" width="400">
 
 ## Salesperson
 
-List Salesperson | GET | http://localhost:8090/api/salespeople/
+### List Salesperson
 
-Result : ![alt text](ghi/app/public/listsalesperson.png)
+- **Method**: GET
+- **Endpoint**: [http://localhost:8090/api/salespeople/](http://localhost:8090/api/salespeople/)
+- **Result**: <img src="ghi/app/public/listsalesperson.png" alt="List Salesperson" width="400">
 
-Add Salesperson | POST | http://localhost:8090/api/salespeople/
+### Add Salesperson
 
-Input JSON body : ![alt text](![alt text](ghi/app/public/salepersonjson.png))
+- **Method**: POST
+- **Endpoint**: [http://localhost:8090/api/salespeople/](http://localhost:8090/api/salespeople/)
+- **Input JSON body**: <img src="ghi/app/public/salepersonjson.png" alt="Add Salesperson JSON" width="400">
+- **Result**: <img src="ghi/app/public/salepersonresponse.png" alt="Add Salesperson Response" width="400">
 
-Result: ![alt text](ghi/app/public/salepersonresponse.png)
+### Delete Salesperson
 
-Delete Salesperson | DELETE | http://localhost:8090/api/salespeople/id
-
-Result : ![alt text](ghi/app/public/delete.png)
+- **Method**: DELETE
+- **Endpoint**: [http://localhost:8090/api/salespeople/id](http://localhost:8090/api/salespeople/id)
+- **Result**: <img src="ghi/app/public/delete.png" alt="Delete Salesperson" width="400">
 
 ## Customer
 
-List Customer | GET | http://localhost:8090/api/customers/
+### List Customer
 
-Result : ![alt text](ghi/app/public/listcustomer.png)
+- **Method**: GET
+- **Endpoint**: [http://localhost:8090/api/customers/](http://localhost:8090/api/customers/)
+- **Result**: <img src="ghi/app/public/listcustomer.png" alt="List Customer" width="400">
 
-Add Customer | POST | http://localhost:8090/api/customers/
+### Add Customer
 
-Input JSON body : ![alt text](ghi/app/public/customerjson.png)
+- **Method**: POST
+- **Endpoint**: [http://localhost:8090/api/customers/](http://localhost:8090/api/customers/)
+- **Input JSON body**: <img src="ghi/app/public/customerjson.png" alt="Add Customer JSON" width="400">
+- **Result**: <img src="ghi/app/public/customerjson.png" alt="Add Customer Response" width="400">
 
-Result: ![alt text](ghi/app/public/customerjson.png)
+### Delete Customer
 
-Delete Customer | DELETE | http://localhost:8090/api/customers/id
-
-Result : ![alt text](ghi/app/public/delete.png)
+- **Method**: DELETE
+- **Endpoint**: [http://localhost:8090/api/customers/id](http://localhost:8090/api/customers/id)
+- **Result**: <img src="ghi/app/public/delete.png" alt="Delete Customer" width="400">
 
 ## Design
 
