@@ -21,7 +21,7 @@ docker-compose up<br>
 
 List Saless | GET | http://localhost:8090/api/sales/
 
-Result : ![alt text](ghi/app/public/listsale.png)
+Result : <img src="ghi/app/public/listsale.png" alt="ghi/app/public/listsale.png" width="300" height="200">
 
 Add Sales | POST | http://localhost:8090/api/sales/
 
