@@ -17,68 +17,23 @@ docker-compose up<br>
 
 ## Accessing Endpoints to Send and View Data: Access Through Insomnia & Your Browser
 
-## Sale
-
-### List Sales
-
-- **Method**: GET
-- **Endpoint**: [http://localhost:8090/api/sales/](http://localhost:8090/api/sales/)
-- **Result**: <img src="ghi/app/public/listsale.png" alt="List Sales" width="400">
-
-### Add Sales
-
-- **Method**: POST
-- **Endpoint**: [http://localhost:8090/api/sales/](http://localhost:8090/api/sales/)
-- **Input JSON body**: <img src="ghi/app/public/addsalejson.png" alt="Add Sales JSON" width="400">
-- **Result**: <img src="ghi/app/public/addsaleresponse.png" alt="Add Sales Response" width="400">
-
-### Delete Sales
-
-- **Method**: DELETE
-- **Endpoint**: [http://localhost:8090/api/sales/id](http://localhost:8090/api/sales/id)
-- **Result**: <img src="ghi/app/public/delete.png" alt="Delete Sales" width="400">
-
-## Salesperson
-
-### List Salesperson
-
-- **Method**: GET
-- **Endpoint**: [http://localhost:8090/api/salespeople/](http://localhost:8090/api/salespeople/)
-- **Result**: <img src="ghi/app/public/listsalesperson.png" alt="List Salesperson" width="400">
-
-### Add Salesperson
-
-- **Method**: POST
-- **Endpoint**: [http://localhost:8090/api/salespeople/](http://localhost:8090/api/salespeople/)
-- **Input JSON body**: <img src="ghi/app/public/salepersonjson.png" alt="Add Salesperson JSON" width="400">
-- **Result**: <img src="ghi/app/public/salepersonresponse.png" alt="Add Salesperson Response" width="400">
-
-### Delete Salesperson
-
-- **Method**: DELETE
-- **Endpoint**: [http://localhost:8090/api/salespeople/id](http://localhost:8090/api/salespeople/id)
-- **Result**: <img src="ghi/app/public/delete.png" alt="Delete Salesperson" width="400">
-
-## Customer
-
-### List Customer
-
-- **Method**: GET
-- **Endpoint**: [http://localhost:8090/api/customers/](http://localhost:8090/api/customers/)
-- **Result**: <img src="ghi/app/public/listcustomer.png" alt="List Customer" width="400">
-
-### Add Customer
-
-- **Method**: POST
-- **Endpoint**: [http://localhost:8090/api/customers/](http://localhost:8090/api/customers/)
-- **Input JSON body**: <img src="ghi/app/public/customerjson.png" alt="Add Customer JSON" width="400">
-- **Result**: <img src="ghi/app/public/customerjson.png" alt="Add Customer Response" width="400">
-
-### Delete Customer
-
-- **Method**: DELETE
-- **Endpoint**: [http://localhost:8090/api/customers/id](http://localhost:8090/api/customers/id)
-- **Result**: <img src="ghi/app/public/delete.png" alt="Delete Customer" width="400">
+| Endpoint           | Method | Description                | Screenshot                                                         |
+| ------------------ | ------ | -------------------------- | ------------------------------------------------------------------ |
+| **Sale**           |        |                            |                                                                    |
+| List Sales         | GET    | View all sales             | ![List Sales](ghi/app/public/listsale.png)                         |
+| Add Sales          | POST   | Add a new sale             | ![Add Sales](ghi/app/public/addsalejson.png)                       |
+|                    |        |                            | ![Add Sales Response](ghi/app/public/addsaleresponse.png)          |
+| Delete Sales       | DELETE | Delete a sale by ID        | ![Delete Sales](ghi/app/public/delete.png)                         |
+| **Salesperson**    |        |                            |                                                                    |
+| List Salesperson   | GET    | View all salespeople       | ![List Salesperson](ghi/app/public/listsalesperson.png)            |
+| Add Salesperson    | POST   | Add a new salesperson      | ![Add Salesperson JSON](ghi/app/public/salepersonjson.png)         |
+|                    |        |                            | ![Add Salesperson Response](ghi/app/public/salepersonresponse.png) |
+| Delete Salesperson | DELETE | Delete a salesperson by ID | ![Delete Salesperson](ghi/app/public/delete.png)                   |
+| **Customer**       |        |                            |                                                                    |
+| List Customer      | GET    | View all customers         | ![List Customer](ghi/app/public/listcustomer.png)                  |
+| Add Customer       | POST   | Add a new customer         | ![Add Customer JSON](ghi/app/public/customerjson.png)              |
+|                    |        |                            | ![Add Customer Response](ghi/app/public/customerjson.png)          |
+| Delete Customer    | DELETE | Delete a customer by ID    | ![Delete Customer](ghi/app/public/delete.png)                      |
 
 ## Design
 
