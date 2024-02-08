@@ -53,7 +53,7 @@ Result : ![alt text](ghi/app/public/delete.png)
 
 List Customer | GET | http://localhost:8090/api/customers/
 
-Result : ![alt text](ghi/app/public\listcustomer.png)
+Result : ![alt text](ghi/app/public/listcustomer.png)
 
 Add Customer | POST | http://localhost:8090/api/customers/
 
